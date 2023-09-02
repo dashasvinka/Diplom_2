@@ -4,9 +4,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.File;
-
 import static io.restassured.RestAssured.given;
 
 public class GetOrdersTest {
@@ -33,13 +31,12 @@ public class GetOrdersTest {
     }
     @Test
     public void getOrdersWithAuth() {
-        ResponseUserModel user = given()
+                 given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)
                 .and()
                 .when()
-                .get("/api/auth/user")
-                .as(ResponseUserModel.class);
+                .get("/api/auth/user");
         Response response = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)

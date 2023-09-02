@@ -4,11 +4,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.File;
-
 import static io.restassured.RestAssured.given;
-import static org.apache.commons.lang3.StringUtils.equalsIgnoreCase;
 import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
 
 public class ChangeUserInformationTest {

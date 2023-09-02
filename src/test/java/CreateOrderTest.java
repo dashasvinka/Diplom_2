@@ -34,13 +34,12 @@ public class CreateOrderTest {
     @Test
     public void createOrderFullListPositiveWithAut() {
         File json = new File("src/main/resources/createOrderFullListPositiveFile.json");
-    ResponseUserModel user = given()
+             given()
             .header("Content-type", "application/json")
             .header("Authorization", currentToken)
             .and()
             .when()
-            .get("/api/auth/user")
-            .as(ResponseUserModel.class);
+            .get("/api/auth/user");
     Response response = given()
             .header("Content-type", "application/json")
             .header("Authorization", currentToken)
@@ -58,13 +57,12 @@ public class CreateOrderTest {
     @Test
     public void createOrderEmptyListWithAut() {
         File json = new File("src/main/resources/createOrderEmptyListWithAutFile.json");
-        ResponseUserModel user = given()
+                 given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)
                 .and()
                 .when()
-                .get("/api/auth/user")
-                .as(ResponseUserModel.class);
+                .get("/api/auth/user");
         Response response = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)
@@ -83,13 +81,12 @@ public class CreateOrderTest {
     @Test
     public void createOrderInvalidIngredientWithAuth() {
         File json = new File("src/main/resources/createOrderInvalidIngredientWithAuthFile.json");
-        ResponseUserModel user = given()
+                 given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)
                 .and()
                 .when()
-                .get("/api/auth/user")
-                .as(ResponseUserModel.class);
+                .get("/api/auth/user");
         Response response = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", currentToken)
